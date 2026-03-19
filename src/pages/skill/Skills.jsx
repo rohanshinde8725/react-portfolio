@@ -20,7 +20,7 @@ const Skills = () => {
         </div>
 
         <div className='w-[90%] mx-auto flex gap-15'>
-            <div className='w-1/2 pt-15 pl-15 flex flex-col justify-center'>
+            <div className='w-1/2 pt-15 pl-10 flex flex-col justify-center'>
                 <h2 className='text-4xl font-semibold'>
                     My creative skills & experiences.
                 </h2>

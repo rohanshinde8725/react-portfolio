@@ -4,6 +4,7 @@ import Navbar from './navbar/Navbar'
 import About from './pages/about/About'
 import Skills from './pages/skill/Skills'
 import Projects from './pages/project/Projects'
+import Contact from './pages/contact/Contact'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </>
   )
 }
