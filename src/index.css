@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com');
+
+
+/* Position dots */
+.mySwiper .swiper-pagination {
+  margin-top: 80px;
+  position: relative;
+}
+
+/* Default dots */
+.mySwiper .swiper-pagination-bullet {
+  background: #999;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Active dot */
+.mySwiper .swiper-pagination-bullet-active {
+  background: #ed143d;
+  width: 25px;
+  border-radius: 10px;
+}
