@@ -28,11 +28,11 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 lg:gap-10 text-base lg:text-lg font-semibold">
-          <li><a href="#home" className="hover:text-[#ed143d] transition">Home</a></li>
-          <li><a href="#about" className="hover:text-[#ed143d] transition">About</a></li>
-          <li><a href="#skills" className="hover:text-[#ed143d] transition">Skills</a></li>
-          <li><a href="#projects" className="hover:text-[#ed143d] transition">Projects</a></li>
-          <li><a href="#contact" className="hover:text-[#ed143d] transition">Contact</a></li>
+          <li><a href="#home" className="text-white hover:text-gray-300 transition duration-300">Home</a></li>
+          <li><a href="#about" className="text-white hover:text-gray-300 transition duration-300">About</a></li>
+          <li><a href="#skills" className="text-white hover:text-gray-300 transition duration-300">Skills</a></li>
+          <li><a href="#projects" className="text-white hover:text-gray-300 transition duration-300">Projects</a></li>
+          <li><a href="#contact" className="text-white hover:text-gray-300 transition duration-300">Contact</a></li>
         </ul>
 
         {/* Mobile Icon */}

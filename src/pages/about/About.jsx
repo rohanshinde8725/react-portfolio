@@ -62,13 +62,14 @@ const About = () => {
             </p>
 
             {/* Button */}
-            <button className='mt-3 py-3 px-6 w-fit mx-auto md:mx-0 
+            <a href='https://drive.google.com/file/d/1ZGZNQOPZqj633akF5CEwY70JvPNJj4-E/view' 
+              target='_blank'
+              className='mt-3 py-3 px-6 w-fit mx-auto md:mx-0 
               bg-white text-[#ed143d] border-2 border-[#ed143d] 
               text-base sm:text-lg rounded-md cursor-pointer 
               hover:bg-[#ed143d] hover:text-white transition-all duration-300 font-semibold'>
               Download RESUME
-            </button>
-
+            </a>
           </div>
         </div>
       </div>
