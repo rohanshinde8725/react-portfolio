@@ -1,114 +1,122 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Projects = () => {
   return (
-    <div className='w-full py-25'>
-        <div className='text-center'>
-            <h1 className='text-4xl font-bold'>My Projects</h1>
-            <h3 className='text-xl font-semibold text-[#ed143d]'>Projects Done</h3>
-        </div>
+    <section id='projects' className='w-full py-16 bg-white scroll-mt-18'>
 
-        <div className='w-[80%] mx-auto py-5 mt-10'>
-            <Swiper spaceBetween={50} slidesPerView={3} pagination={{ clickable: true }} className="mySwiper" modules={[Navigation, Pagination]} 
-            breakpoints={{320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 },}}>
+      {/* Heading */}
+      <div className='text-center mb-10'>
+        <h1 className='text-3xl sm:text-4xl font-bold'>My Projects</h1>
+        <h3 className='text-lg sm:text-xl font-semibold text-[#ed143d] my-1'>
+          Projects Done
+        </h3>
+      </div>
 
-                {/* Slide-1 */}
-                <SwiperSlide>
-                    <div className="flex flex-col items-center justify-center text-black text-center">
-                        <img className='h-35 w-35 object-cover rounded-full border-4 border-[#ed143d] 
-                        hover:border-teal-400 transition-all duration-300 cursor-pointer' 
-                        src="../images/travel-agency.jpg" alt="" />
-                        <h1 className='text-2xl my-2 font-semibold'>Travel Agency Website</h1>
-                        <p className='text-center text-base'>Built a high performance, responsive travel agency website with modern design
-                            using React and JavaScript optimized for speed and scalability across all devices.
-                        </p>
-                        <button className='py-2 px-7 border-2 border-[#ed143d] rounded-sm mt-4 
-                        hover:bg-[#ed143d] hover:text-white cursor-pointer transition-all duration-300'>
-                            View Project 
-                        </button>
-                    </div>
-                </SwiperSlide>
+      {/* Container */}
+      <div className='max-w-6xl mx-auto px-5 sm:px-10'>
 
-                {/* Slide-2 */}
-                <SwiperSlide>
-                    <div className="flex flex-col items-center justify-center text-black text-center">
-                        <img className='h-35 w-35 object-cover rounded-full border-4 border-[#ed143d] 
-                        hover:border-teal-400 transition-all duration-300 cursor-pointer' 
-                        src="../images/ems.jpg" alt="" />
-                        <h1 className='text-2xl my-2 font-semibold'>Employee Management System</h1>
-                        <p className='text-center text-base'>Employee Management System is a web-based 
-                            application designed to manage employee records efficiently like Create, 
-                            Search, Update, and Delete.
-                        </p>    
-                        <button className='py-2 px-7 border-2 border-[#ed143d] rounded-sm mt-4
-                        hover:bg-[#ed143d] hover:text-white cursor-pointer transition-all duration-300'>
-                            View Project
-                        </button>
-                    </div>
-                </SwiperSlide>
+        <Swiper
+           spaceBetween={20}
+            loop={true}   
+            speed={500}   
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            modules={[Pagination, Autoplay]}
+            breakpoints={{
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+          }}
+        >
 
-                {/* Slide-3 */}
-                <SwiperSlide>
-                    <div className="flex flex-col items-center justify-center text-black text-center">
-                        <img className='h-35 w-35 rounded-full border-4 border-[#ed143d] 
-                        hover:border-teal-400 transition-all duration-300 cursor-pointer' 
-                        src="../images/ets.png" alt="" />
-                        <h1 className='text-2xl my-2 font-semibold'>Expense Tracker System</h1>
-                        <p className='text-center text-base'>Expense Tracker is a web-based application 
-                            that helps users manage their expenses efficiently. It allows users to track 
-                            income, categorize expenses, and generate reports for better financial planning.
-                        </p>
-                        <button className='py-2 px-7 border-2 border-[#ed143d] rounded-sm mt-4
-                        hover:bg-[#ed143d] hover:text-white cursor-pointer transition-all duration-300'>
-                            View Project
-                        </button>
-                    </div>
-                </SwiperSlide>
+          {/* Slide */}
+          {[
+            {
+              img: "../images/travel-agency.jpg",
+              title: "Travel Agency Website",
+              desc: "A frontend practice website built to explore and implement different UI designs, layouts, and web development concepts, helping improve skills through hands-on experimentation.",
+              link: "https://rohanshinde8725.github.io/practice/",
+            },
+            {
+              img: "../images/ems.jpg",
+              title: "Employee Management System",
+              desc: "An Employee Management System web application designed to manage employee data efficiently, allowing users to add, update, delete, and view employee records through a simple and user-friendly interface.",
+              link: "https://rohanshinde8725.github.io/Employee-Management-System/",
+            },
+            {
+              img: "../images/ets.png",
+              title: "Expense Tracker",
+              desc: "A simple and user-friendly expense tracker web application that helps users manage their daily income and expenses, track spending, and maintain a clear financial overview.",
+              link: "https://rohanshinde8725.github.io/expense-tracker-system/",
+            },
+            {
+              img: "../images/foodies.png",
+              title: "Foodies",
+              desc: "A visually appealing food website designed to explore various dishes and cuisines, featuring a clean layout, responsive design, and interactive elements for an engaging browsing experience.",
+              link: "https://rohanshinde8725.github.io/Foodies/",
+            },
+            {
+              img: "../images/tic-tac-toe.jpeg",
+              title: "Tic Tac Toe",
+              desc: "A responsive Tic Tac Toe web game developed with HTML, CSS, and JavaScript, featuring smooth gameplay, turn-based logic, and automatic win/draw detection",
+              link: "https://rohanshinde8725.github.io/tic-tac-toe/",
+            },
+            {
+              img: "../images/ben-10.png",
+              title: "Ben-10",
+              desc: "A modern and responsive React + Tailwind CSS portfolio website inspired by Ben 10, showcasing projects, skills, and personal details with smooth UI design and interactive components.",
+              link: "https://benten-10.netlify.app/",
+            }
+          ].map((project, index) => (
+            <SwiperSlide key={index}>
+              
+              <div className="py-6 text-center flex flex-col items-center transition duration-300 h-full">
 
-                {/* Slide-4 */}
-                <SwiperSlide>
-                    <div className="flex flex-col items-center justify-center text-black text-center">
-                        <img className='h-35 w-35 rounded-full border-4 border-[#ed143d] 
-                        hover:border-teal-400 transition-all duration-300 cursor-pointer' 
-                        src="../images/foodies.png" alt="" />
-                        <h1 className='text-2xl my-2 font-semibold'>Foodies</h1>
-                        <p className='text-center text-base'>Foodies brings you fresh, delicious, and 
-                            handcrafted meals made with the best ingredients. From healthy bites to 
-                            indulgent treats, we serve food that satisfies every craving with love and 
-                            quality.
-                        </p>
-                        <button className='py-2 px-7 border-2 border-[#ed143d] rounded-sm mt-4
-                        hover:bg-[#ed143d] hover:text-white cursor-pointer transition-all duration-300'>
-                            View Project
-                        </button>
-                    </div>
-                </SwiperSlide>
+                {/* Image */}
+                <img
+                  className='w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-full border-4 border-[#ed143d] 
+                  hover:border-teal-400 transition duration-300 cursor-pointer'
+                  src={project.img}
+                  alt=""
+                />
 
-                {/* Slide-5 */}
-                <SwiperSlide>
-                    <div className="flex flex-col items-center justify-center text-black text-center">
-                        <img className='h-35 w-35 rounded-full border-4 border-[#ed143d] 
-                        hover:border-teal-400 transition-all duration-300 cursor-pointer' 
-                        src="../images/travel-agency.jpg" alt="" />
-                        <h1 className='text-2xl my-2 font-semibold'>Tic-Tac-Toe</h1>
-                        <p className='text-center text-base'>Tic-Tac-Toe Game is a web-based application 
-                            developed using React.js that allows two players to play the classic 
-                            Tic-Tac-Toe game interactively. 
-                        </p>
-                        <button className='py-2 px-7 border-2 border-[#ed143d] rounded-sm mt-4 
-                        hover:bg-[#ed143d] hover:text-white cursor-pointer transition-all duration-300'>
-                            View Project
-                        </button>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </div>
-    </div>
+                {/* Title */}
+                <h1 className='text-lg sm:text-xl md:text-2xl my-2 font-semibold'>
+                  {project.title}
+                </h1>
+
+                {/* Description */}
+                <p className='text-sm sm:text-base text-gray-600'>
+                  {project.desc}
+                </p>
+
+                {/* Button */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='mt-4 inline-block py-2 px-6 border-2 border-[#ed143d] rounded-md 
+                  hover:bg-[#ed143d] hover:text-white transition duration-300'
+                >
+                  View Project
+                </a>
+
+              </div>
+
+            </SwiperSlide>
+          ))}
+
+        </Swiper>
+
+      </div>
+    </section>
   )
 }
 
