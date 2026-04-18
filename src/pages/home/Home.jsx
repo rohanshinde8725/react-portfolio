@@ -8,7 +8,7 @@ const Home = () => {
     scroll-mt-18">
 
       {/* Background Image */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10">
+      <div className="fixed top-0 left-0 w-full h-full -z-10">
         <img
           src="./images/home-bg.jpeg"
           alt=""
