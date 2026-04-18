@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 const Home = () => {
   
   return (
-    <section id="home" className="relative h-100 md:min-h-screen flex items-center text-white 
+    <section id="home" className="relative h-150 md:min-h-screen flex items-center text-white 
     scroll-mt-18">
 
       {/* Background Image */}
