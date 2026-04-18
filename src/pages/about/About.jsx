@@ -22,7 +22,7 @@ const About = () => {
           {/* Image */}
           <div className='w-full md:w-[40%] flex justify-center'>
             <img
-              className='lg:w-80 sm:w-50 md:w-full h-auto object-cover rounded-lg'
+              className='lg:w-80 sm:w-[50%] md:w-full h-100 md:h-auto object-cover rounded-lg'
               src="../images/me.jpg"
               alt=""
             />

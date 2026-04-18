@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 const App = () => {
   return (
     <>
-      <div className="relative h-screen w-full">
+      <div className="relative w-full">
         <Navbar />
         <Home />
       </div>
